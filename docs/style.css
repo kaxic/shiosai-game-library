@@ -1,153 +1,116 @@
 :root {
   color-scheme: dark;
   --water: #142d2e;
-  --foam: #f5ecda;
-  --brass: #e5bd78;
-  --ink: #18353a;
-  --quiet: #48625e;
+  --foam: #f6eedf;
+  --ink: #193536;
+  --quiet: #4f6259;
+  --brass: #e4bd7d;
+  --rule: #d4c9b4;
+  --serif: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif CJK JP", "BIZ UDPMincho", serif;
   font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
-
 * { box-sizing: border-box; }
-html { min-width: 260px; }
 body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(ellipse at 81% -26%, #385450 0%, transparent 60%),
-              linear-gradient(135deg, #1b3838, var(--water) 55%, #112729);
+  background: radial-gradient(ellipse at 85% -17%, #385550 0%, transparent 59%),
+              linear-gradient(135deg, #1c3939, var(--water) 55%, #102628);
   color: var(--foam);
 }
 a { color: inherit; }
-.library {
-  width: min(1352px, calc(100% - clamp(32px, 7.4vw, 132px)));
-  margin: 0 auto;
-  padding: clamp(27px, 4.8vh, 59px) 0 36px;
-}
+.library { width: min(1380px, calc(100% - clamp(36px, 7vw, 118px))); margin: auto; padding: clamp(24px, 3.5vh, 46px) 0 30px; }
 .masthead {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 22px;
-  border-bottom: 1px solid #63827b;
-  padding-bottom: clamp(19px, 2.8vh, 31px);
-  margin-bottom: clamp(19px, 2.8vh, 30px);
+  gap: 19px;
+  border-bottom: 1px solid #64807a;
+  padding-bottom: clamp(16px, 2.3vh, 26px);
+  margin-bottom: clamp(17px, 2.4vh, 28px);
 }
-.identity { display: flex; align-items: center; gap: clamp(13px, 1.4vw, 21px); }
-.mark { width: clamp(46px, 4.5vw, 66px); height: auto; }
-h1, h2, .letter {
-  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif CJK JP", "BIZ UDPMincho", serif;
-}
-h1 { margin: 0; font-size: clamp(33px, 3.5vw, 55px); font-weight: 600; letter-spacing: .05em; line-height: 1.16; }
-.intro { margin: 6px 0 0; color: #d0dbcb; font-size: clamp(12px, 1.01vw, 15px); letter-spacing: .045em; line-height: 1.5; }
+.identity { display: flex; align-items: center; gap: clamp(12px, 1.4vw, 20px); }
+.mark { width: clamp(45px, 4.4vw, 62px); height: auto; }
+h1, h2 { font-family: var(--serif); }
+h1 { margin: 0; font-size: clamp(33px, 3.4vw, 54px); font-weight: 600; letter-spacing: .045em; line-height: 1.13; }
+.intro { margin: 6px 0 0; color: #d5dfd0; font-size: clamp(12px, 1.01vw, 15px); letter-spacing: .025em; line-height: 1.5; }
 .download {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  min-height: 43px;
-  padding: 8px 15px;
-  border: 1px solid #82988b;
-  border-radius: 3px;
-  color: var(--foam);
-  font-size: clamp(12px, .98vw, 14px);
-  font-weight: 600;
-  line-height: 1.3;
-  text-decoration: none;
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  min-height: 44px; padding: 8px 15px; border: 1px solid #84998e; border-radius: 3px;
+  font-size: 13px; font-weight: 600; text-decoration: none;
 }
-.download-icon {
-  display: inline-block;
-  width: 13px;
-  color: var(--brass);
-  border-bottom: 1px solid currentColor;
-  font: 600 17px/.86 Georgia, serif;
-  text-align: center;
-}
+.download-icon { width: 13px; color: var(--brass); border-bottom: 1px solid; font: 600 17px/.85 Georgia, serif; text-align: center; }
 .shelf {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(16px, 2.1vh, 24px) clamp(16px, 1.65vw, 25px);
-  margin: 0;
-  padding: 0;
+  list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); align-items: start;
+  gap: clamp(16px, 2.2vh, 26px) clamp(16px, 1.65vw, 25px); padding: 0; margin: 0;
 }
 .entry { min-width: 0; scroll-margin-top: 14px; }
+.entry article {
+  overflow: hidden; border: 1px solid #7c8f82; border-radius: 5px;
+  background: linear-gradient(110deg, #fcf5e7, #f0e8d8); color: var(--ink); box-shadow: 0 5px 14px #071d1d36;
+}
+.entry:target article { outline: 2px solid var(--brass); outline-offset: 2px; }
+.cover { height: clamp(107px, min(14.7vw, calc(48vh - 285px)), 202px); overflow: hidden; border-bottom: 2px solid #b99767; background: #395750; }
+.cover img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 50%; }
+.caption { padding: clamp(10px, 1.45vh, 15px) clamp(15px, 1.35vw, 22px) 8px; }
+.subtitle { margin: 0 0 2px; color: var(--quiet); font-size: 12px; font-weight: 500; letter-spacing: .08em; line-height: 1.35; }
+h2 { margin: 0; font-size: clamp(20px, 1.65vw, 27px); font-weight: 700; line-height: 1.37; overflow-wrap: anywhere; }
+.letter { margin-right: .12em; color: #7c5830; }
+.blurb { margin: 6px 0 10px; min-height: 4.95em; font-size: clamp(13px, .98vw, 15px); line-height: 1.65; }
+.actions { position: relative; border-top: 1px solid var(--rule); padding-top: 4px; }
+summary, .game { min-height: 42px; display: inline-flex; align-items: center; font-size: 13px; font-weight: 700; }
+summary {
+  width: max-content; max-width: calc(100% - 95px); gap: 9px; padding: 0 6px 0 2px;
+  color: #3c574f; cursor: pointer; list-style: none;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before {
+  content: ""; flex: 0 0 7px; height: 7px; border: solid #527168; border-width: 0 1.6px 1.6px 0;
+  transform: translateY(-2px) rotate(45deg);
+}
+details[open] summary::before { transform: translateY(2px) rotate(225deg); }
 .game {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  height: 100%;
-  border: 1px solid #819489;
-  border-radius: 4px;
-  background: var(--foam);
-  color: var(--ink);
-  text-decoration: none;
-  box-shadow: 0 5px 16px #081b1c35;
+  position: absolute; right: 0; top: 6px; justify-content: center; gap: 10px;
+  min-width: 80px; min-height: 37px; padding: 6px 13px; border: 1px solid #28564e; border-radius: 3px;
+  background: #234d45; color: #fff6df; text-decoration: none; line-height: 1;
 }
-.cover {
-  overflow: hidden;
-  background: #34514b;
-  height: clamp(142px, min(16vw, 26vh), 237px);
-  border-bottom: 2px solid #bea374;
-}
-.cover img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 51%; }
-.caption {
-  flex: 1 0 auto;
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: center;
-  column-gap: clamp(10px, .95vw, 15px);
-  padding: clamp(10px, 1.4vh, 16px) clamp(13px, 1.15vw, 19px);
-  min-height: 69px;
-  background: linear-gradient(110deg, #fbf3e3, #eee6d5);
-}
-.letter {
-  display: grid;
-  place-items: center;
-  width: clamp(31px, 2.7vw, 42px);
-  padding-right: 9px;
-  border-right: 1px solid #c7bda6;
-  color: #7b6340;
-  font-size: clamp(32px, 2.9vw, 44px);
-  font-weight: 500;
-  line-height: 1.14;
-}
-h2 {
-  margin: 0;
-  font-size: clamp(17px, 1.46vw, 23px);
-  font-weight: 700;
-  line-height: 1.42;
-  overflow-wrap: anywhere;
-}
-.names p { margin: 3px 0 0; color: var(--quiet); font-size: 12px; line-height: 1.45; letter-spacing: .035em; }
-.open-arrow { position: relative; width: 19px; height: 14px; color: #41635e; }
-.open-arrow::before, .open-arrow::after { content: ""; position: absolute; }
-.open-arrow::before { left: 1px; right: 1px; top: 6px; border-top: 1.5px solid currentColor; }
-.open-arrow::after { right: 1px; top: 2.5px; width: 7px; height: 7px; border: solid currentColor; border-width: 1.5px 1.5px 0 0; transform: rotate(45deg); }
+.game span { color: #e9cd94; font: 18px/1 Georgia, serif; }
+.notes { margin: 1px 0 6px; padding: 8px 0 2px; border-top: 1px dotted #bdad93; }
+.notes dt { margin: 6px 0 3px; color: #70502d; font-weight: 700; font-size: 13px; line-height: 1.5; }
+.notes dd { margin: 0 0 13px; color: var(--ink); font-size: 14px; line-height: 1.8; overflow-wrap: anywhere; }
+.notes dd:last-child { margin-bottom: 4px; }
 .skip { position: fixed; top: 8px; left: 8px; z-index: 3; padding: .65em 1em; background: var(--foam); color: var(--ink); transform: translateY(-150%); }
 .skip:focus { transform: none; }
-a:focus-visible { outline: 3px solid #ffdb85; outline-offset: 3px; }
-#games:focus:not(:focus-visible) { outline: none; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #ad5b14; outline-offset: 2px; }
+.skip:focus-visible, .download:focus-visible { outline-color: #ffda8b; }
+#games:focus { outline: none; }
 @media (hover: hover) {
-  .game:hover, .game:focus-visible { border-color: var(--brass); }
-  .game:hover .cover img, .game:focus-visible .cover img { transform: scale(1.025); }
-  .game:hover .open-arrow, .game:focus-visible .open-arrow { transform: translateX(3px); }
+  .game:hover { background: #33675b; }
+  summary:hover { color: #1a3937; text-decoration: underline; text-underline-offset: 3px; }
   .download:hover { background: #33504b; border-color: var(--brass); }
 }
-@media (prefers-reduced-motion: no-preference) {
-  .cover img { transition: transform 230ms ease-out; }
-  .open-arrow { transition: transform 150ms ease-out; }
+@media (min-width: 1000px) and (max-height: 790px) {
+  .library { padding-top: 16px; padding-bottom: 12px; }
+  .masthead { padding-bottom: 13px; margin-bottom: 15px; }
+  .intro { margin-top: 3px; }
+  h1 { font-size: clamp(32px, 3.1vw, 44px); }
+  .cover { height: clamp(84px, calc(22vh - 58px), 118px); }
+  .caption { padding-top: 9px; padding-bottom: 5px; }
+  .blurb { margin-top: 4px; margin-bottom: 7px; }
 }
-@media (max-width: 969px) {
-  .library { width: min(94%, 840px); }
-  .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .cover { height: auto; aspect-ratio: 2 / 1; }
+@media (max-width: 999px) {
+  .library { width: min(94%, 870px); }
+  .shelf { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .cover { height: auto; aspect-ratio: 2.25 / 1; }
+  .blurb { font-size: 14px; min-height: 4.95em; }
 }
-@media (max-width: 589px) {
+@media (max-width: 625px) {
   .library { width: calc(100% - 32px); padding: 23px 0 26px; }
-  .masthead { flex-wrap: wrap; gap: 15px; padding-bottom: 17px; margin-bottom: 17px; }
-  .shelf { grid-template-columns: minmax(0, 1fr); gap: 17px; }
-  .download { min-height: 41px; }
-  .cover { aspect-ratio: 2.08 / 1; }
-  .caption { padding: 11px 15px; }
-  h2 { font-size: 19px; }
+  .masthead { flex-wrap: wrap; gap: 14px; padding-bottom: 17px; margin-bottom: 17px; }
+  .shelf { grid-template-columns: minmax(0,1fr); gap: 18px; }
+  .cover { aspect-ratio: 2.1 / 1; }
+  .caption { padding: 13px 16px 7px; }
+  h2 { font-size: clamp(19px, 5.3vw, 25px); }
+  .blurb { min-height: 0; margin: 7px 0 12px; }
+  .game { min-width: 83px; min-height: 44px; }
+  summary { min-height: 48px; }
 }

@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#142d2e">
-  <meta name="description" content="潮彩ゲーム棚の6作品。島の開拓、ダンジョン探索、食堂経営、ブロック建築、釣りをブラウザーで遊べます。">
+  <meta name="description" content="潮彩ゲーム棚の6作品。遊び方と目標を読んで、島の開拓、地下探索、農業、建築、釣りをブラウザーで遊べます。">
   <title>潮彩ゲーム棚</title>
   <link rel="icon" href="assets/gameshelf.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=1.1.0">
 </head>
 <body>
   <a class="skip" href="#games">ゲームを選ぶ</a>
@@ -17,75 +17,152 @@
         <img class="mark" src="assets/gameshelf.png" width="60" height="60" alt="">
         <div>
           <h1>潮彩ゲーム棚</h1>
-          <p class="intro">表紙を選ぶと、ブラウザーで遊べます。</p>
+          <p class="intro">6つの作品から選んで、ブラウザーで遊べます。</p>
         </div>
       </div>
-      <a class="download" href="https://github.com/kaxic/shiosai-game-library/releases/download/v1.0.0/shiosai-games-windows.zip">
-        <span class="download-icon" aria-hidden="true">↓</span>
-        Windows版をまとめて入手
+      <a class="download" href="https://github.com/kaxic/shiosai-game-library/releases/download/v1.1.0/shiosai-games-windows.zip">
+        <span class="download-icon" aria-hidden="true">↓</span>Windows版をまとめて入手
       </a>
     </header>
     <nav id="games" aria-label="ゲームを選ぶ" tabindex="-1">
       <ol class="shelf" role="list">
         <li id="A" class="entry">
-          <a class="game" href="https://kaxic.github.io/shiosai-nagi-island/" aria-label="A　島の開拓と庭づくり（凪島だより）を遊ぶ">
-            <div class="cover"><img src="assets/nagi-island.webp" alt="" width="960" height="540" decoding="async"></div>
+          <article aria-labelledby="A-title">
+            <div class="cover"><img src="assets/nagi-island.webp" width="960" height="540" alt=""></div>
             <div class="caption">
-              <span class="letter" aria-hidden="true">A</span>
-              <div class="names"><h2>島の開拓と庭づくり</h2><p>凪島だより</p></div>
-              <span class="open-arrow" aria-hidden="true"></span>
+              <header>
+                <p class="subtitle">凪島だより</p>
+                <h2 id="A-title"><span class="letter">A</span>島開拓ゲーム</h2>
+              </header>
+              <p class="blurb">木を切り出し、石を集めて、傷んだ船着き場を直すところから始まります。港に船を呼んだら、白砂の離島にも渡って、自分好みの海辺の庭をつくれます。</p>
+              <div class="actions">
+                <details name="game-notes">
+                  <summary aria-label="A島開拓ゲームの遊び方と目標">遊び方と目標</summary>
+                  <dl class="notes">
+                    <dt>最初の一歩</dt><dd>小屋の近くの木と岩に歩み寄り、調べて木材を3つ、石を2つ集めましょう。依頼帳の「船着き場の修繕」から渡し守に納品すると、港に最初の船がやってきます。</dd>
+                    <dt>遊びの進め方</dt><dd>畑でかぶを育て、作業台では集めた材料をベンチや花壇に仕立てます。家具は向きを変えて何度でも飾り直せます。依頼や出荷で得た貝貨を道具に使うと、採集や栽培もはかどります。</dd>
+                    <dt>長く遊ぶには</dt><dd>8章の開拓を終えて岬に灯台を建てた後は、定期便の注文が届きます。二つの島で18点の漂着物を図鑑に収めたり、18種類の家具を組み合わせて庭展の出品印を集めたりできます。</dd>
+                  </dl>
+                </details>
+                <a class="game" href="https://kaxic.github.io/shiosai-nagi-island/" aria-label="A島開拓ゲームを遊ぶ">遊ぶ<span aria-hidden="true">→</span></a>
+              </div>
             </div>
-          </a>
+          </article>
         </li>
         <li id="B" class="entry">
-          <a class="game" href="https://kaxic.github.io/shiosai-ember-keepers/" aria-label="B　剣と回避のダンジョンRPG（灯守の地下回廊）を遊ぶ">
-            <div class="cover"><img src="assets/ember-keepers.webp" alt="" width="960" height="540" decoding="async"></div>
+          <article aria-labelledby="B-title">
+            <div class="cover"><img src="assets/ember-keepers.webp" width="960" height="540" alt=""></div>
             <div class="caption">
-              <span class="letter" aria-hidden="true">B</span>
-              <div class="names"><h2>剣と回避のダンジョンRPG</h2><p>灯守の地下回廊</p></div>
-              <span class="open-arrow" aria-hidden="true"></span>
+              <header>
+                <p class="subtitle">灯守の地下回廊</p>
+                <h2 id="B-title"><span class="letter">B</span>拠点ダンジョン探索ゲーム</h2>
+              </header>
+              <p class="blurb">拠点の門から地下へ潜り、剣を振り、敵の攻撃を見て身をかわすリアルタイムのアクションRPGです。持ち帰った火片で装備を鍛え、もう一部屋先を目指します。</p>
+              <div class="actions">
+                <details name="game-notes">
+                  <summary aria-label="B拠点ダンジョン探索ゲームの遊び方と目標">遊び方と目標</summary>
+                  <dl class="notes">
+                    <dt>最初の一歩</dt><dd>拠点の右手にある門を調べ、「灰灯の坑道」へ出発しましょう。敵に近づいて斬撃を当て、床に攻撃の予告が出たら回避で範囲の外へ。攻撃が過ぎたところが反撃の機会です。</dd>
+                    <dt>遊びの進め方</dt><dd>部屋を制圧したら、祭壇で傷を癒やすか、古櫃の火片を持ち帰るかを選びます。探索中は遺物で斬撃や回避を強め、帰還後は鍛冶場で灯剣・外套・薬びんを強化できます。</dd>
+                    <dt>長く遊ぶには</dt><dd>全8地区の奥には、それぞれ違う守り手が待っています。潮刃の走る床や結晶波を見切り、16種類の遺物を試しながら攻略を進めましょう。4地区を越えると深層の巡回にも挑めます。</dd>
+                  </dl>
+                </details>
+                <a class="game" href="https://kaxic.github.io/shiosai-ember-keepers/" aria-label="B拠点ダンジョン探索ゲームを遊ぶ">遊ぶ<span aria-hidden="true">→</span></a>
+              </div>
             </div>
-          </a>
+          </article>
         </li>
         <li id="C" class="entry">
-          <a class="game" href="https://kaxic.github.io/shiosai-astral-labyrinth/" aria-label="C　一手ずつ進む迷宮探索（星環の迷宮）を遊ぶ">
-            <div class="cover"><img src="assets/astral-labyrinth.webp" alt="" width="960" height="540" decoding="async"></div>
+          <article aria-labelledby="C-title">
+            <div class="cover"><img src="assets/astral-labyrinth.webp" width="960" height="540" alt=""></div>
             <div class="caption">
-              <span class="letter" aria-hidden="true">C</span>
-              <div class="names"><h2>一手ずつ進む迷宮探索</h2><p>星環の迷宮</p></div>
-              <span class="open-arrow" aria-hidden="true"></span>
+              <header>
+                <p class="subtitle">星環の迷宮</p>
+                <h2 id="C-title"><span class="letter">C</span>ローグライクゲーム</h2>
+              </header>
+              <p class="blurb">自分が一手動くたびに敵も動く、ターン制の迷宮探索です。足元の予兆を見て、攻撃するか、一歩退くか、その場で待つかを考えながら星碑を探します。</p>
+              <div class="actions">
+                <details name="game-notes">
+                  <summary aria-label="Cローグライクゲームの遊び方と目標">遊び方と目標</summary>
+                  <dl class="notes">
+                    <dt>最初の一歩</dt><dd>編成で職業を選んで出発します。初めは接近戦が得意な「星盾衛」が扱いやすいでしょう。矢印で1マスずつ進み、敵のいるマスに踏み込むと攻撃、閉じた扉に進むと開扉になります。</dd>
+                    <dt>遊びの進め方</dt><dd>各階で星碑を一つ灯すと、先へ進む条件の一つを満たします。宝箱や祭壇へ寄るか、階段を急ぐかは自分次第。戦術図で通路を確かめ、投光で近くの罠を払いながら進みましょう。</dd>
+                    <dt>長く遊ぶには</dt><dd>第4・第7・第10層では番人を倒す必要があります。十層を踏破した先には、暗さや罠の配置が違う三つの航路があります。「今日の星図」では同じ日・同じ条件の迷宮に別の職業でも挑めます。</dd>
+                  </dl>
+                </details>
+                <a class="game" href="https://kaxic.github.io/shiosai-astral-labyrinth/" aria-label="Cローグライクゲームを遊ぶ">遊ぶ<span aria-hidden="true">→</span></a>
+              </div>
             </div>
-          </a>
+          </article>
         </li>
         <li id="D" class="entry">
-          <a class="game" href="https://kaxic.github.io/shiosai-wheat-window/" aria-label="D　畑と料理の食堂経営（麦窓食堂）を遊ぶ">
-            <div class="cover"><img src="assets/wheat-window.webp" alt="" width="960" height="540" decoding="async"></div>
+          <article aria-labelledby="D-title">
+            <div class="cover"><img src="assets/wheat-window.webp" width="960" height="540" alt=""></div>
             <div class="caption">
-              <span class="letter" aria-hidden="true">D</span>
-              <div class="names"><h2>畑と料理の食堂経営</h2><p>麦窓食堂</p></div>
-              <span class="open-arrow" aria-hidden="true"></span>
+              <header>
+                <p class="subtitle">麦窓食堂</p>
+                <h2 id="D-title"><span class="letter">D</span>農業ゲーム</h2>
+              </header>
+              <p class="blurb">前庭と水車の段丘園で野菜を育て、その収穫で小さな食堂を営みます。春のキッシュから冬のポトフまで、畑の旬を献立に取り入れて注文を仕上げましょう。</p>
+              <div class="actions">
+                <details name="game-notes">
+                  <summary aria-label="D農業ゲームの遊び方と目標">遊び方と目標</summary>
+                  <dl class="notes">
+                    <dt>最初の一歩</dt><dd>厨房の献立帳を開き、手元の小麦で「窓辺の丸パン」を選びましょう。「和える」「焼く」の順に針を止めます。焼けたパンをお客に配膳したら、売上で次にまく種を買えます。</dd>
+                    <dt>遊びの進め方</dt><dd>種をまいて水をやり、眠ると作物が育ちます。段丘園には偶数日の朝に水が入るので、前庭と作付けを分けるのも手です。収穫後はそのまま売るか、厨房でひと手間加えるかを選べます。</dd>
+                    <dt>長く遊ぶには</dt><dd>二つの畑の計24区画で16種類の作物を育て、32品の献立に挑みましょう。上質な材料と調理の腕で特選料理を仕上げて四季の品評会へ。翌年は配膳や出品の目標も上がります。</dd>
+                  </dl>
+                </details>
+                <a class="game" href="https://kaxic.github.io/shiosai-wheat-window/" aria-label="D農業ゲームを遊ぶ">遊ぶ<span aria-hidden="true">→</span></a>
+              </div>
             </div>
-          </a>
+          </article>
         </li>
         <li id="E" class="entry">
-          <a class="game" href="https://kaxic.github.io/shiosai-sky-garden/" aria-label="E　浮島のブロック建築（空庭ブロック工房）を遊ぶ">
-            <div class="cover"><img src="assets/sky-garden.webp" alt="" width="960" height="540" decoding="async"></div>
+          <article aria-labelledby="E-title">
+            <div class="cover"><img src="assets/sky-garden.webp" width="960" height="540" alt=""></div>
             <div class="caption">
-              <span class="letter" aria-hidden="true">E</span>
-              <div class="names"><h2>浮島のブロック建築</h2><p>空庭ブロック工房</p></div>
-              <span class="open-arrow" aria-hidden="true"></span>
+              <header>
+                <p class="subtitle">空庭ブロック工房</p>
+                <h2 id="E-title"><span class="letter">E</span>ブロック建築ゲーム</h2>
+              </header>
+              <p class="blurb">丸太や板を一つずつ組んで、空に浮かぶ島にベンチや橋、水車を建てます。見本を回して構造を確かめ、部材の位置や向きを合わせる立体の建築ゲームです。</p>
+              <div class="actions">
+                <details name="game-notes">
+                  <summary aria-label="Eブロック建築ゲームの遊び方と目標">遊び方と目標</summary>
+                  <dl class="notes">
+                    <dt>最初の一歩</dt><dd>設計帳で「風待ちのベンチ」を選びましょう。「次の部位」で丸太の脚を呼び出して設置。ガイドに沿って梁を渡し、北向きの座面を並べたら、完成したベンチを出品します。</dd>
+                    <dt>遊びの進め方</dt><dd>島の桟橋や名所で材料を補給し、設計図の形に合わせて積み上げます。視点を回せば裏側や高さも確認できます。一度置いた部材は取り消せるので、向きのある板や段もじっくり合わせられます。</dd>
+                    <dt>長く遊ぶには</dt><dd>最初のベンチを出品すると2番目の島へ渡れます。設計を仕上げていくと、全6島で32種類の素材が使えます。12件の設計を仕上げると、材料の残りを気にせず自由に建築できます。巡回依頼では設計ごとの最少手数も記録されます。</dd>
+                  </dl>
+                </details>
+                <a class="game" href="https://kaxic.github.io/shiosai-sky-garden/" aria-label="Eブロック建築ゲームを遊ぶ">遊ぶ<span aria-hidden="true">→</span></a>
+              </div>
             </div>
-          </a>
+          </article>
         </li>
         <li id="F" class="entry">
-          <a class="game" href="https://kaxic.github.io/shiosai-tide-journal/" aria-label="F　釣りと魚図鑑（潮路の釣り手帖）を遊ぶ">
-            <div class="cover"><img src="assets/tide-journal.webp" alt="" width="960" height="540" decoding="async"></div>
+          <article aria-labelledby="F-title">
+            <div class="cover"><img src="assets/tide-journal.webp" width="960" height="540" alt=""></div>
             <div class="caption">
-              <span class="letter" aria-hidden="true">F</span>
-              <div class="names"><h2>釣りと魚図鑑</h2><p>潮路の釣り手帖</p></div>
-              <span class="open-arrow" aria-hidden="true"></span>
+              <header>
+                <p class="subtitle">潮路の釣り手帖</p>
+                <h2 id="F-title"><span class="letter">F</span>釣りゲーム</h2>
+              </header>
+              <p class="blurb">源流、干潟、外礁へと釣り歩く、魚の手帖です。魚が走るときは糸を送り、休めば巻き取る。釣り上げた一尾が標本画になり、場所と大きさの記録が残ります。</p>
+              <div class="actions">
+                <details name="game-notes">
+                  <summary aria-label="F釣りゲームの遊び方と目標">遊び方と目標</summary>
+                  <dl class="notes">
+                    <dt>最初の一歩</dt><dd>最初の依頼は源流のオイカワ一尾。岸で川虫を付けて竿を構え、飛距離を決めて投げます。浮きがしっかり沈んだら合わせましょう。釣れた魚を依頼人に届けると次の水辺が開きます。</dd>
+                    <dt>遊びの進め方</dt><dd>手帖に載る手掛かりを読み、餌・時刻・潮・投げる距離を変えて狙う魚を絞ります。掛かった後は張力を見ながら巻き、釣果を売って竿を強化。依頼に必要な尾数は売らずに取り置けます。</dd>
+                    <dt>長く遊ぶには</dt><dd>16件の依頼を進め、8か所の水辺にすむ48種の標本画を集めましょう。竿を鍛えたら源流のイトウや沖のクロカジキにも挑めます。手帖では魚種ごとに最大体長と最大重量を更新できます。</dd>
+                  </dl>
+                </details>
+                <a class="game" href="https://kaxic.github.io/shiosai-tide-journal/" aria-label="F釣りゲームを遊ぶ">遊ぶ<span aria-hidden="true">→</span></a>
+              </div>
             </div>
-          </a>
+          </article>
         </li>
       </ol>
     </nav>
